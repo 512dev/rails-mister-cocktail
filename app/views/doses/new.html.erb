@@ -1,0 +1,10 @@
+<h1><%= @cocktail.name %></h1>
+
+<h3>Select an ingredient</h3>
+	<div class="ingredient-card">
+		  <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.input :ingredient_id, collection: @ingredients  %>
+          <%= f.input :description %>
+          <%= f.submit "add an ingredient", class: "btn btn-primary" %>
+        <% end %>
+	</div>
