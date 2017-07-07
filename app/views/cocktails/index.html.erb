@@ -1,12 +1,20 @@
-<h1>Welcome to Mr Cocktail!</h1>
-<%= link_to "Add your cocktail", new_cocktail_path, class: "btn btn-primary" %>
-<div class="container">
-	<% @cocktails.each do |cocktail| %>
-	  <div class="cocktail-card">
-	  	<%= cl_image_tag cocktail.cocktail_img, height: 200, width: 200, crop: :fill %>
-	  	<%= cocktail.name %>
-	  	<%= link_to "View Ingredients", cocktail_path(cocktail), class: "btn btn-success" %>
-	  	<%= link_to "Delete", cocktail_path(cocktail), method: :delete, class: "btn btn-warning" %>
-	  </div>
-	<% end %>
+<div class="conatiner">
+	<div class="welcome text-center">
+			<h1>Welcome to Mr Cocktail!</h1>
+	</div>
+</div>
+<div class="container cocktail-box">
+	<div class="row">
+		<% @cocktails.each do |cocktail| %>
+		 <%= link_to cocktail_path(cocktail) do %>
+			<div class="col-xs-6 col-md-4">
+		  	<div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.cocktail_img, height: 300, width: 400, crop: :fill %>')">
+		  	<h2><%= cocktail.name %></h2>
+		  </div>
+		</div>
+		  	<% end %>
+		<% end %>
+	
+	</div>
 </div>

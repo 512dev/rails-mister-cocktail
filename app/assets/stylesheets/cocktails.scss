@@ -1,3 +1,47 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.cocktail-box{
+	margin-top: 30px;
+}
+.cocktail-card{
+	box-shadow: 2px 2px 3px #AAAAAA;
+	height: 200px;
+	margin: 10px; 
+}
+.cocktail-box a {
+	text-decoration: none;
+	color: white;
+}
+.cocktail-box a:hover{
+	color: #B9B9B9;
+}
+.cocktail-card h2{
+	vertical-align: middle;
+}
+.margin-bottom{
+	margin-bottom: 5px;	
+}
+.welcome{
+	height: 400px;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('image.jpg');
+	background-size: cover;
+	color: white;
+
+}
+.welcome h1{
+	font-size: 5em;
+	text-shadow: 1px 1px 2px #AAAAAA;
+	line-height: 400px;
+}
+.box-shadow{
+	box-shadow: 2px 2px 3px #AAAAAA;
+}
+.form{
+	padding: 30px;
+		
+}
+.list-style-none{
+	list-style: none;
+}

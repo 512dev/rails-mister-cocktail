@@ -1,9 +1,8 @@
 <div class="conatiner">
   <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <div class="col-xs-12 col-md-6 col-md-offset-3 box-shadow form">
         <%= simple_form_for [@cocktail] do |f| %>
           <%= f.input :name %>
-          <%= f.label "Cocktail Image" %>
           <%= f.input :cocktail_img%>
   		  <%= f.input :cocktail_img_cache, as: :hidden %>
           <%= f.submit "Create Cocktail", class: "btn btn-primary" %>
