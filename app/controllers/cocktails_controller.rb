@@ -44,12 +44,11 @@ class CocktailsController < ApplicationController
   		@cocktail = Cocktail.find(params[:id])
 	    @cocktail.destroy
 	    respond_to do |format|
-	      format.html { redirect_to cocktail_url, notice: 'cocktail was successfully destroyed.' }
-	      format.json { head :no_content }
+	      format.html { redirect_to root_path, notice: 'cocktail was successfully destroyed.' }
 	    end
   	end
   def cocktail_params
-  	params.require(:cocktail).permit(:name)
+  	params.require(:cocktail).permit(:name, :cocktail_img, :cocktail_img_cache)
   end
 
 end
