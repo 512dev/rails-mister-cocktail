@@ -25,7 +25,7 @@
 }
 .welcome{
 	height: 400px;
-	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('image.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), asset_url('image.jpg');
 	background-size: cover;
 	color: white;
 
